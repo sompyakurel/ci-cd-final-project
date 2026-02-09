@@ -99,8 +99,7 @@ spec:
       script: |
         buildah bud -t $(params.IMAGE) -f $(params.DOCKERFILE) $(params.CONTEXT)
         buildah push $(params.IMAGE)
-      securityContext:
-        privileged: true
+      
 
 ---
 apiVersion: tekton.dev/v1beta1
